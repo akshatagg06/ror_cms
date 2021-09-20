@@ -227,7 +227,7 @@ CREATE TABLE `subjects` (
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -236,7 +236,7 @@ CREATE TABLE `subjects` (
 
 LOCK TABLES `subjects` WRITE;
 /*!40000 ALTER TABLE `subjects` DISABLE KEYS */;
-INSERT INTO `subjects` VALUES (1,'Initial Subject',1,1,'2016-07-12 20:26:16','2016-07-12 20:33:43'),(2,'Next Subject',2,1,'2016-07-12 20:28:15','2016-07-12 20:35:02'),(4,'Third Subject',3,0,'2016-07-12 21:00:10','2016-07-12 21:00:10');
+INSERT INTO `subjects` VALUES (1,'Initial Subject',1,1,'2016-07-12 20:26:16','2016-07-12 20:33:43'),(2,'Next Subject',2,1,'2016-07-12 20:28:15','2016-07-12 20:35:02'),(4,'Third Subject',4,0,'2016-07-12 21:00:10','2016-07-17 20:01:30'),(7,'Default',1,0,'2016-07-15 15:54:00','2016-07-18 17:09:12');
 /*!40000 ALTER TABLE `subjects` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -249,4 +249,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-07-17 15:19:15
+-- Dump completed on 2016-07-18 13:11:39
