@@ -33,7 +33,7 @@ CREATE TABLE `admin_users` (
   `updated_at` datetime NOT NULL,
   PRIMARY KEY (`id`),
   KEY `index_admin_users_on_username` (`username`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -42,7 +42,7 @@ CREATE TABLE `admin_users` (
 
 LOCK TABLES `admin_users` WRITE;
 /*!40000 ALTER TABLE `admin_users` DISABLE KEYS */;
-INSERT INTO `admin_users` VALUES (1,'Kevin','Skoglund','','kskoglund',NULL,'2016-07-13 18:45:19','2016-07-13 18:45:19');
+INSERT INTO `admin_users` VALUES (1,'Kevin','Skoglund','','kskoglund',NULL,'2016-07-13 18:45:19','2016-07-13 18:45:19'),(2,'John','Doe','nobody@nowhere.com','johndoe1',NULL,'2016-07-18 22:10:53','2016-07-18 22:10:53');
 /*!40000 ALTER TABLE `admin_users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -249,4 +249,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-07-18 13:11:39
+-- Dump completed on 2016-07-18 18:13:39
