@@ -124,7 +124,7 @@ CREATE TABLE `pages` (
 
 LOCK TABLES `pages` WRITE;
 /*!40000 ALTER TABLE `pages` DISABLE KEYS */;
-INSERT INTO `pages` VALUES (1,1,'First Page','first',1,0,'2016-07-13 17:53:59','2016-07-13 17:53:59'),(2,NULL,'Second Page','second',2,0,'2016-07-13 17:55:04','2016-07-13 17:55:04');
+INSERT INTO `pages` VALUES (1,1,'First Page','first',1,1,'2016-07-13 17:53:59','2016-07-20 00:59:09'),(2,NULL,'Second Page','second',2,0,'2016-07-13 17:55:04','2016-07-13 17:55:04');
 /*!40000 ALTER TABLE `pages` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -199,7 +199,7 @@ CREATE TABLE `sections` (
   `updated_at` datetime NOT NULL,
   PRIMARY KEY (`id`),
   KEY `index_sections_on_page_id` (`page_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -208,7 +208,7 @@ CREATE TABLE `sections` (
 
 LOCK TABLES `sections` WRITE;
 /*!40000 ALTER TABLE `sections` DISABLE KEYS */;
-INSERT INTO `sections` VALUES (1,NULL,'Section One',1,0,NULL,NULL,'2016-07-13 19:29:35','2016-07-13 19:29:35');
+INSERT INTO `sections` VALUES (1,1,'Section One',1,1,'text','Hello, this is section 1.','2016-07-13 19:29:35','2016-07-20 00:58:28'),(2,1,'Another one',2,1,'HTML','<strong>Hello</strong> everyone.','2016-07-20 00:58:55','2016-07-20 00:58:55');
 /*!40000 ALTER TABLE `sections` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -236,7 +236,7 @@ CREATE TABLE `subjects` (
 
 LOCK TABLES `subjects` WRITE;
 /*!40000 ALTER TABLE `subjects` DISABLE KEYS */;
-INSERT INTO `subjects` VALUES (1,'Initial Subject',1,1,'2016-07-12 20:26:16','2016-07-12 20:33:43'),(2,'Next Subject',2,1,'2016-07-12 20:28:15','2016-07-12 20:35:02'),(4,'Third Subject',4,0,'2016-07-12 21:00:10','2016-07-17 20:01:30'),(7,'Default',1,0,'2016-07-15 15:54:00','2016-07-18 17:09:12');
+INSERT INTO `subjects` VALUES (1,'Initial Subject',2,1,'2016-07-12 20:26:16','2016-07-20 04:04:13'),(2,'Next Subject',3,1,'2016-07-12 20:28:15','2016-07-20 04:04:13'),(4,'Third Subject',4,0,'2016-07-12 21:00:00','2016-07-20 04:04:13'),(7,'Default',1,0,'2016-07-15 15:54:00','2016-07-20 04:04:13');
 /*!40000 ALTER TABLE `subjects` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -249,4 +249,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-07-19 17:40:21
+-- Dump completed on 2016-07-20  0:08:10
