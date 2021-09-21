@@ -28,9 +28,9 @@ CREATE TABLE `admin_users` (
   `last_name` varchar(50) DEFAULT NULL,
   `email` varchar(100) NOT NULL DEFAULT '',
   `username` varchar(25) DEFAULT NULL,
-  `hashed_password` varchar(40) DEFAULT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
+  `password_digest` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `index_admin_users_on_username` (`username`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
@@ -42,7 +42,7 @@ CREATE TABLE `admin_users` (
 
 LOCK TABLES `admin_users` WRITE;
 /*!40000 ALTER TABLE `admin_users` DISABLE KEYS */;
-INSERT INTO `admin_users` VALUES (1,'Kevin','Skoglund','','kskoglund',NULL,'2016-07-13 18:45:19','2016-07-13 18:45:19'),(2,'John','Doe','nobody@nowhere.com','johndoe1',NULL,'2016-07-18 22:10:53','2016-07-18 22:10:53');
+INSERT INTO `admin_users` VALUES (1,'Kevin','Skoglund','someone@somewhere.com','kskoglund','2016-07-13 18:45:19','2016-07-19 21:38:03','$2a$10$L7BjBctpDLkbdM7aUS4q9umEKA6aVmm941wRuT62gngPydNJ1S/w.'),(2,'John','Doe','nobody@nowhere.com','johndoe1','2016-07-18 22:10:53','2016-07-18 22:10:53',NULL);
 /*!40000 ALTER TABLE `admin_users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -147,7 +147,7 @@ CREATE TABLE `schema_migrations` (
 
 LOCK TABLES `schema_migrations` WRITE;
 /*!40000 ALTER TABLE `schema_migrations` DISABLE KEYS */;
-INSERT INTO `schema_migrations` VALUES ('20160712162630'),('20160712163345'),('20160712171148'),('20160712182008'),('20160712182014'),('20160712182019'),('20160713184040'),('20160713192536');
+INSERT INTO `schema_migrations` VALUES ('20160712162630'),('20160712163345'),('20160712171148'),('20160712182008'),('20160712182014'),('20160712182019'),('20160713184040'),('20160713192536'),('20160719194846');
 /*!40000 ALTER TABLE `schema_migrations` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -249,4 +249,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-07-18 18:13:39
+-- Dump completed on 2016-07-19 17:40:21
